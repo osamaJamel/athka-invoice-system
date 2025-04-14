@@ -6,6 +6,8 @@ const LOCAL_STORAGE_KEYS = {
   LAST_INVOICE_NUMBER: 'lastInvoiceNumber',
 };
 
+import InvoiceForm from './InvoiceForm';
+
 const App = () => {
   const [customers, setCustomers] = useState([]);
   const [invoices, setInvoices] = useState([]);
@@ -50,6 +52,7 @@ const App = () => {
   };
 
   return (
+       <InvoiceForm />
     <div className="p-4">
       <h1 className="text-xl font-bold mb-4">نظام إدارة العملاء والفواتير</h1>
       <CustomerList customers={customers} onSelect={setSelectedCustomerId} />
